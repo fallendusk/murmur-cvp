@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: flaskcvp
+Version: 2.5
+Summary: Minimalistic CVP Provider using Flask and Mumble-Django's connectors
+Home-page: http://www.mumble-django.org
+Author: Michael Ziegler
+Author-email: diese-addy@funzt-halt.net
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
