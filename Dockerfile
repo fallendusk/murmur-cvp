@@ -3,6 +3,7 @@ MAINTAINER Greg Helton <greg@fallendusk.com>
 
 ENV MURMUR_ICE_HOST mumble
 ENV MURMUR_ICE_PORT 6502
+ENV MURMUR_CONNECT_URL mumble://localhost:64738
 EXPOSE 5000
 
 

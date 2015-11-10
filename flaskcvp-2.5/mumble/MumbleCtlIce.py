@@ -2,7 +2,7 @@
 # kate: space-indent on; indent-width 4; replace-tabs on;
 
 """
- *  Copyright © 2009, withgod                   <withgod@sourceforge.net>
+ *  Copyright Â© 2009, withgod                   <withgod@sourceforge.net>
  *         2009-2010, Michael "Svedrin" Ziegler <diese-addy@funzt-halt.net>
  *
  *  Mumble-Django is free software; you can redistribute it and/or modify
@@ -181,6 +181,9 @@ def MumbleCtlIce( connstring, slicefile=None, icesecret=None ):
 
         elif murmurversion[2] >= 3:
             return MumbleCtlIce_123( connstring, meta )
+
+    elif murmurversion[:2] == (1, 3):
+        return MumbleCtlIce_123( connstring, meta )
 
     raise NotImplementedError( "No ctl object available for Murmur version %d.%d.%d" % tuple(murmurversion) )
 
@@ -716,5 +719,3 @@ class MumbleCtlIce_123(MumbleCtlIce_120):
     @protectDjangoErrPage
     def getUptime(self, srvid):
         return self._getIceServerObject(srvid).getUptime()
-
-
